@@ -46,7 +46,7 @@ html{
     text-shadow: -1px 2px 8px white;
 }
 
-.header-right a:hover{
+.header-right{
     color: red;
     cursor: pointer;
 }

@@ -1,29 +1,10 @@
-//Sobre
-var sobre = document.querySelector('.header-right .sobre');
-    sobre.addEventListener('mouseenter', (sobre_on)=>{
-        sobre.style.color = 'red';
-    });
-    sobre.addEventListener('mouseleave', (sobre_off)=>{
-        sobre.style.color = 'white';
-    });
+const header = document.getElementById('header');
+const nav = document.getElementById('nav');
+const subMenu = document.getElementById('sub-menu');
 
-//Comunnity
-var comunnity = document.querySelector('.header-right .comunnity');
-    comunnity.addEventListener('mouseenter', (comunnity_on)=>{
-        comunnity.style.color = 'red';
-    });
-    comunnity.addEventListener('mouseleave', (comunnity_off)=>{
-        comunnity.style.color = 'white';
-    });
+//Botão Menu
+    function toggleMenu(){
+        header.classList.toggle('active');
+    }
 
-//Vip
-var vip = document.querySelector('.header-right .vips');
-    vip.addEventListener('mouseenter', (vip_on)=>{
-        vip.style.color = 'red';
-    });
-    vip.addEventListener('mouseleave', (vip_off)=>{
-        vip.style.color = 'white';
-    });
-
-var menuSelect = document.querySelector('.header-right .menu-select');
-
+    nav.addEventListener('click', toggleMenu);

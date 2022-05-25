@@ -12,68 +12,103 @@ html{
 }
 
 .logo{
-    float: left;
-    
-}
-
-.header{
-    overflow:hidden;
-    background-color: black;
-    border: 1px solid red;
-}
-
-.header h1{
-    color: white;
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%);
-    padding: 5px;
-    position: absolute;
-    font-family: 'Oswald', sans-serif;
-}
-
-.header-right{
-    float:right;
-    list-style: none;
-    text-align: center;
-    padding: 20px;
-}
-.header-right a {
-    text-decoration:none;
-    color: white;
-    font-size: 24px;
-    padding: 20px 10px;
-    text-shadow: -1px 2px 8px white;
-}
-
-
-.center{
-    z-index: -1;
-    height: 100vh;
-    background-size: cover;
-}
-
-.title{
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    color: white;
-    text-align: center;
-}
-
-footer{
-    background-color: black;
     position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+    margin-left: 235px;
+    margin-top: 8px;
 }
 
-.content{
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+
+#header{
+    height: 60px;
+    width: 100vw;
+    background-color: black;
+    border-bottom: 1px solid red;
+    position: fixed;
+}
+
+#sub-menu{
+    margin-left: 690px;
+    margin-top: 60px;
+    padding-right: 81px;
+    height: 99vh;
+    position: absolute;
+    background-color: black;
+    opacity: 85%;
+    display: none;
+}
+
+#sub-menu ul li{
+    list-style: none;
+    text-align: right;
+    padding-top: 40px;
+    padding-left: 113px;
+    padding-right: 80px;
+    padding-bottom: 40px;
+    cursor: pointer;
+}
+
+#sub-menu ul li:hover{
+    opacity: 30%;
+    background-color: rgb(43, 43, 43);
+}
+
+#sub-menu a{
+    font-size: 30px;
     color: white;
-    text-align: center;
-    font-size: 12px;
+    text-decoration: none;
+    margin-left: 60px;
+    margin-bottom: 40px;
+}
+
+#nav{
+    position: absolute;
+    margin-left: 968px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+#line1, #line2, #line3{
+    background-color: white;
+    width: 40px;
+    height: 3px;
+    transition: 0.2s ease-in;
+}
+
+#line2{
+    margin-top: 10px;
+}
+
+#line3{
+    margin-top: 10px;
+}
+
+.center img{
+    width: 100vw;
+    height: 99vh;
+    z-index: -1;
+}
+
+#header.active #sub-menu{
+    display: block;
+}
+
+#header.active #line1{
+    margin-top: 10px;
+    transform: rotate(45deg);
+    transition: 0.2s ease-in;
+}
+
+#header.active #line2{
+    opacity: 0;
+    transition: 0.2s ease-in;
+}
+
+#header.active #line3{
+    margin-top: -16px;
+    transform: rotate(-45deg);
+    transition: 0.2s ease-in;
 }

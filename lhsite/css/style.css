@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Another;
+    src: url('/fontes/Another\ Danger\ Slanted\ -\ Demo.otf');
+}
+
 *{
     margin:0;
     padding:0;
@@ -39,6 +44,7 @@ html{
     background-color: black;
     opacity: 85%;
     display: none;
+    z-index: 1;
 }
 
 #sub-menu ul li{
@@ -88,8 +94,40 @@ html{
 
 .center img{
     width: 100vw;
-    height: 99vh;
+    height: 100vh;
+    position: fixed;
+    z-index: -2;
+}
+
+#bordao{
+    position: fixed;
+    margin-top: 310px;
+    margin-left: 17%;
     z-index: -1;
+}
+
+#bordao h1{
+    text-align: center;
+    color: #ff0000;
+    font-family: Another;
+    font-size: 60px;
+}
+
+.icons{
+    position: fixed;
+    margin-top: 550px;
+    margin-left: 425px;
+}
+
+.icons img{
+    width: 80px;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.icons #instagram{
+    width: 70px;
+    margin-bottom: 5px;
 }
 
 #header.active #sub-menu{

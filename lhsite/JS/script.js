@@ -5,6 +5,8 @@ const discord = document.getElementById('discord');
 const instagram = document.getElementById('instagram');
 const tiktok = document.getElementById('tiktok');
 
+
+
 //Botão Menu
     function toggleMenu(){
         header.classList.toggle('active');
@@ -13,6 +15,7 @@ const tiktok = document.getElementById('tiktok');
     nav.addEventListener('click', toggleMenu);
 
 //Icones Sociais
+if(window.matchMedia("(min-width: 1025px)").matches){
 
     discord.addEventListener('mouseenter', function(){
         discord.style.width = '100px';
@@ -22,7 +25,7 @@ const tiktok = document.getElementById('tiktok');
     });
         discord.addEventListener('mouseleave', function(){
             discord.style.width = '80px';
-            discord.style.opacity = 0.85;
+            discord.style.opacity = 0.7;
             discord.style.marginLeft = '200px';
             discord.style.marginTop = '-3px';
         });
@@ -35,7 +38,7 @@ const tiktok = document.getElementById('tiktok');
     });
         instagram.addEventListener('mouseleave', function(){
             instagram.style.width = '70px';
-            instagram.style.opacity = 0.85;
+            instagram.style.opacity = 0.7;
             instagram.style.marginLeft = '80px';
             instagram.style.marginTop = '-3px';
         });
@@ -48,7 +51,50 @@ const tiktok = document.getElementById('tiktok');
     });
         tiktok.addEventListener('mouseleave', function(){
             tiktok.style.width = '80px';
-            tiktok.style.opacity = 0.85;
+            tiktok.style.opacity = 0.7;
             tiktok.style.marginLeft = '320px';
             tiktok.style.marginTop = '-3px';
         });
+
+}else if(window.matchMedia("(max-width: 1024px)").matches){
+
+    discord.addEventListener('mouseenter', function(){
+        discord.style.width = '80px';
+        discord.style.opacity = 1;
+        discord.style.marginLeft = '195px';
+        discord.style.marginTop = '-10px';
+    });
+        discord.addEventListener('mouseleave', function(){
+            discord.style.width = '70px';
+            discord.style.opacity = 0.7;
+            discord.style.marginLeft = '200px';
+            discord.style.marginTop = '0px';
+        });
+
+    instagram.addEventListener('mouseenter', function(){
+        instagram.style.width = '70px';
+        instagram.style.opacity = 1;
+        instagram.style.marginLeft = '75px';
+        instagram.style.marginTop = '-10px';
+    });
+        instagram.addEventListener('mouseleave', function(){
+            instagram.style.width = '60px';
+            instagram.style.opacity = 0.7;
+            instagram.style.marginLeft = '80px';
+            instagram.style.marginTop = '0px';
+        });
+
+    tiktok.addEventListener('mouseenter', function(){
+        tiktok.style.width = '80px';
+        tiktok.style.opacity = 1;
+        tiktok.style.marginLeft = '315px';
+        tiktok.style.marginTop = '-10px';
+    });
+        tiktok.addEventListener('mouseleave', function(){
+            tiktok.style.width = '70px';
+            tiktok.style.opacity = 0.7;
+            tiktok.style.marginLeft = '320px';
+            tiktok.style.marginTop = '0px';
+        });
+
+}

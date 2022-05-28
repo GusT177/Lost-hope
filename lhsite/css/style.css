@@ -33,6 +33,7 @@ html{
     background-color: black;
     border-bottom: 1px solid red;
     position: fixed;
+    z-index: 999;
 }
 
 #sub-menu{
@@ -43,7 +44,7 @@ html{
     background-color: black;
     opacity: 0;
     display: block;
-    z-index: 1;
+    z-index: 998;
 }
 
 #sub-menu ul li{
@@ -201,6 +202,14 @@ html{
         font-family: Another;
         font-size: 50px;
         text-shadow: 0 0 5px black;
+    }
+
+    #nav{
+        right: 2%;
+    }
+
+    #sub-menu ul li a{
+        margin-right: 2%;
     }
 
     .icons{

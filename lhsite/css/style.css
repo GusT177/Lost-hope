@@ -101,7 +101,7 @@ html{
 
 #bordao{
     position: fixed;
-    margin-top: 310px;
+    margin-top: 295px;
     margin-left: 17%;
     z-index: -1;
 }
@@ -116,18 +116,30 @@ html{
 .icons{
     position: fixed;
     margin-top: 550px;
-    margin-left: 425px;
+    margin-left: 290px;
+    opacity: 0.85;
 }
 
 .icons img{
-    width: 80px;
-    margin-right: 50px;
     cursor: pointer;
+    position: fixed;
+}
+
+.icons #discord{
+    width: 80px;
+    margin-left: 200px;
+    margin-top: -3px;
+}
+
+.icons #tiktok{
+    width: 80px;
+    margin-left: 320px;
+    margin-top: -3px;
 }
 
 .icons #instagram{
     width: 70px;
-    margin-bottom: 5px;
+    margin-left: 80px;
 }
 
 #header.active #sub-menu{

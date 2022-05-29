@@ -11,37 +11,139 @@ html{
 }
 
 .logo{
-    float: left;
+    position: fixed;
+    margin-left: 23vw;
+    margin-top: 8px;
 }
 
-.header{
-    overflow:hidden;
+.logo img{
+    width: 100px;
+    height: 100px;
+}
+
+#header{
+    height: 60px;
+    width: 100vw;
     background-color: black;
-    border: 1px solid red;
+    border-bottom: 1px solid red;
+    position: fixed;
+    z-index: 999;
 }
 
-.header h1{
-    color: white;
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%);
-    padding: 5px;
+#sub-menu{
+    margin-left: 110vw;
+    margin-top: 60px;
+    height: 99vh;
     position: absolute;
+    background-color: black;
+    opacity: 0;
+    display: block;
+    z-index: 998;
+}
+
+#sub-menu ul li{
+    list-style: none;
+    text-align: right;
+    padding-top: 40px;
+    padding-left: 113px;
+    padding-right: 20vw;
+    padding-bottom: 40px;
+    transform: scale(0);
+    text-align: right;
+    margin-left: 110vw;
+}
+
+#sub-menu ul li:hover{
+    opacity: 30%;
+    background-color: rgb(43, 43, 43);
+}
+
+#sub-menu a{
+    margin-left: 14vw;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 40px;
     font-family: 'Oswald', sans-serif;
 }
 
-.header-right{
-    float:right;
-    list-style: none;
-    text-align: center;
-    padding: 20px;
+#nav{
+    position: absolute;
+    margin-left: 95vw;
+    margin-top: 15px;
+    cursor: pointer;
 }
-.header-right a {
-    text-decoration:none;
-    color: white;
-    font-size: 24px;
-    padding: 20px 10px;
-    text-shadow: -1px 2px 8px white;
+
+#line1, #line2, #line3{
+    background-color: white;
+    width: 40px;
+    height: 3px;
+    transition: 0.2s ease-in;
+}
+
+#line2{
+    margin-top: 10px;
+}
+
+#line3{
+    margin-top: 10px;
+}
+
+
+#header.active #sub-menu{
+    margin-left: 65vw;
+    opacity: 85%;
+    transition: 0.2s ease-in;
+}
+
+#header.active ul li{
+    cursor: pointer;
+    transform: scale(1);
+    margin-left: 0vw;
+    transition: 0.2s ease-in;
+}
+
+#header.active #line1{
+    margin-top: 10px;
+    transform: rotate(45deg);
+    transition: 0.2s ease-in;
+}
+
+#header.active #line2{
+    opacity: 0;
+    transition: 0.2s ease-in;
+}
+
+#header.active #line3{
+    margin-top: -16px;
+    transform: rotate(-45deg);
+    transition: 0.2s ease-in;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo{
+        position: fixed;
+        margin-left: 23.5vw;
+        margin-top: 8px;
+    }
+    
+    .logo img{
+        width: 100px;
+        height: 100px;
+    }
+
+    #nav{
+        right: 2%;
+    }
+
+    #sub-menu ul li a{
+        margin-right: 2%;
+    }
+
+    #header.active #sub-menu{
+        margin-left: 59.5vw;
+    }
+    
 }
 
 .main{
@@ -50,52 +152,7 @@ html{
     background-size: cover;
 }
 
-.title{
-    z-index: 2;   
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    color: white;
-    text-align: center;
-    text-shadow: -1px 2px 8px white;
 
-}
-
-.text1{
-    z-index: 2;   
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    color: white;
-    text-align: center;
-}
-
-.icons{
-    text-align: center;
-    position: absolute;
-    z-index: 3;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-}
-
-.icons a {
-    margin: 4px;
-}
-
-.icons a:hover{
-    opacity: 0.7;
-}
-
-.icons h3 {
-    color: white;
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-    text-shadow: -1px 2px 8px white;
-}
 
 footer{
     background-color: black;

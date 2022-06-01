@@ -16,9 +16,12 @@ html{
 }
 
 .logo{
+    display: flex;
+    width: 100vw;
+    height: 8vh;
     position: fixed;
-    margin-left: 23vw;
-    margin-top: 8px;
+    justify-content: center;
+    z-index: 999;
 }
 
 .logo img{
@@ -36,36 +39,29 @@ html{
 }
 
 #sub-menu{
-    margin-left: 110vw;
-    margin-top: 60px;
-    height: 99vh;
-    position: absolute;
+    width: 50vw;
+    margin-top: 8.75vh;
+    margin-left: 50%;
+    height: 91.25vh;
+    position: fixed;
     background-color: black;
     opacity: 0;
-    display: block;
-    z-index: 998;
 }
 
 #sub-menu ul li{
     list-style: none;
-    text-align: right;
-    padding-top: 40px;
-    padding-left: 113px;
-    padding-right: 20vw;
-    padding-bottom: 40px;
+    text-align: center;
     transform: scale(0);
-    text-align: right;
-    margin-left: 110vw;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
 }
 
 #sub-menu ul li:hover{
-    opacity: 30%;
     background-color: rgb(43, 43, 43);
 }
 
 #sub-menu a{
-    margin-left: 14vw;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     text-decoration: none;
     margin-bottom: 40px;
@@ -76,7 +72,9 @@ html{
     position: absolute;
     margin-left: 95vw;
     margin-top: 15px;
+    right: 1vw;
     cursor: pointer;
+    z-index: 1000;
 }
 
 #line1, #line2, #line3{
@@ -102,9 +100,10 @@ html{
 }
 
 #bordao{
+    width: 100vw;
     position: fixed;
     margin-top: 295px;
-    margin-left: 25vw;
+    align-content: center;
     z-index: -1;
 }
 
@@ -117,39 +116,36 @@ html{
 }
 
 .icons{
+    width: 100vw;
     position: absolute;
-    top: 65%;
-    left: 37%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    margin-top: 75vh;
+    justify-content: center;
+    align-content: center;
 }
 
 .icons img{
     cursor: pointer;
-    position: fixed;
 }
 
 .icons #discord{
     width: 80px;
-    margin-left: 200px;
-    margin-top: -3px;
     opacity: 0.7;
+    margin-right: 2vw;
 }
 
 .icons #tiktok{
     width: 80px;
-    margin-left: 320px;
-    margin-top: -3px;
     opacity: 0.7;
 }
 
 .icons #instagram{
     width: 70px;
-    margin-left: 80px;
     opacity: 0.7;
+    margin-right: 2vw;
 }
 
 #header.active #sub-menu{
-    margin-left: 65vw;
     opacity: 85%;
     transition: 0.2s ease-in;
 }
@@ -178,80 +174,27 @@ html{
     transition: 0.2s ease-in;
 }
 
-@media screen and (max-width: 1024px) {
-    .logo{
-        position: fixed;
-        margin-left: 23.5vw;
-        margin-top: 8px;
-    }
-    
-    .logo img{
-        width: 100px;
-        height: 100px;
-    }
 
-    #bordao{
-        position: fixed;
-        margin-top: 45vh;
-        margin-left: 23vw;
-        z-index: -1;
-    }
-    
-    #bordao h1{
-        text-align: center;
-        color: #ff0000;
-        font-family: Another;
-        font-size: 50px;
-        text-shadow: 0 0 5px black;
-    }
-
-    #nav{
-        right: 2%;
-    }
-
-    #sub-menu ul li a{
-        margin-right: 2%;
-    }
-
-    .icons{
-        position: absolute;
-        top: 65%;
-        left: 15%;
-        transform: translate(-50%, -50%);
-    }
-    
-    .icons img{
-        cursor: pointer;
-        position: fixed;
-        opacity: 0.7;
-    }
-    
-    .icons #discord{
-        width: 70px;
-        margin-left: 200px;
-        margin-top: 0px;
-        opacity: 0.7;
-    }
-    
-    .icons #tiktok{
-        width: 70px;
-        margin-left: 320px;
-        margin-top: 0px;
-        opacity: 0.7;
-    }
-    
-    .icons #instagram{
-        width: 60px;
-        margin-left: 80px;
-        opacity: 0.7;
-    }
-
-    #header.active #sub-menu{
-        margin-left: 59.5vw;
-    }
-    
-}
 
 @media screen and (max-width: 600px) {
-
+    #sub-menu{
+        width: 100vw;
+        height: 100vh;
+        margin-left: 0vw;
+    }
+    
+    #line1, #line2, #line3{
+        background-color: white;
+        width: 40px;
+        height: 3px;
+        transition: 0.2s ease-in;
+    }
+    
+    #line2{
+        margin-top: 10px;
+    }
+    
+    #line3{
+        margin-top: 10px;
+    }
 }

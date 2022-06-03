@@ -99,10 +99,14 @@ html{
     z-index: -2;
 }
 
+#city2{
+    display: none;
+}
+
 #bordao{
     width: 100vw;
     position: fixed;
-    margin-top: 295px;
+    margin-top: 40vh;
     align-content: center;
     z-index: -1;
 }
@@ -177,24 +181,129 @@ html{
 
 
 @media screen and (max-width: 600px) {
-    #sub-menu{
+    .logo{
+        justify-content: left;
+    }
+    
+    .logo img{
+        width: 200px;
+        height: 200px;
+    }
+    
+    #header{
+        height: 15vh;
+        border-bottom: 4px solid red;
+        position: fixed;
+        z-index: 999;
+    }
+
+    .center img{
         width: 100vw;
         height: 100vh;
+        position: absolute;
+        z-index: -2;
+    }
+
+    #city2{
+        margin-top: 100vh;
+        margin-left: -50vw;
+        height: 110vh;
+        width: 200vw;
+        opacity: 0.9;
+        display: block;
+    }
+    
+    #bordao{
+        width: 100vw;
+        position: absolute;
+        margin-top: 40vh;
+        align-content: center;
+        z-index: -1;
+    }
+
+    #bordao h1{
+        font-size: 80px;
+        text-shadow: 0 0 10px white;
+    }
+    
+    #sub-menu{
+        width: 100vw;
+        height: 95vh;
         margin-left: 0vw;
+        margin-top: 15vh;
+    }
+
+    #sub-menu ul li{
+        text-align: center;
+        padding-top: 8vh;
+        padding-bottom: 8vh;
+    }
+
+    #sub-menu a{
+        font-size: 60px;
+        margin-bottom: 40px;
     }
     
     #line1, #line2, #line3{
         background-color: white;
-        width: 40px;
-        height: 3px;
+        width: 90px;
+        height: 10px;
         transition: 0.2s ease-in;
+        margin-top: 1vh;
+        margin-right: 1vw;
     }
     
     #line2{
-        margin-top: 10px;
+        margin-top: 2vh;
     }
     
     #line3{
-        margin-top: 10px;
+        margin-top: 2vh;
+    }
+
+    #header.active #line1{
+        margin-top: 4vh;
+        transform: rotate(45deg);
+        transition: 0.2s ease-in;
+    }
+    
+    #header.active #line2{
+        opacity: 0;
+        transition: 0.2s ease-in;
+    }
+    
+    #header.active #line3{
+        margin-top: -4.25vh;
+        transform: rotate(-45deg);
+        transition: 0.2s ease-in;
+    }
+
+    .icons{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        margin-top: 100vh;
+        justify-content: center;
+        align-content: center;
+        display: grid;
+        z-index: 997;
+    }
+    
+    .icons #discord{
+        width: 180px;
+        opacity: 1;
+        margin-bottom: 10vh;
+        margin-top: 15vh;
+    }
+    
+    .icons #tiktok{
+        width: 180px;
+        opacity: 1;
+    }
+    
+    .icons #instagram{
+        width: 180px;
+        opacity: 1;
+        margin-bottom: 10vh;
     }
 }

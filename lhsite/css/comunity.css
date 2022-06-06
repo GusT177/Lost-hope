@@ -1,31 +1,33 @@
+@font-face {
+    font-family: Another;
+    src: url('/fontes/Another\ Danger\ Slanted\ -\ Demo.otf');
+}
+  
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
     overflow-x: hidden;
     height: 100vh;
-    background-image: linear-gradient(purple, red);
+    background-color: whitesmoke;
 }
 
-
 .logo{
+    display: flex;
+    width: 100vw;
+    height: 8vh;
     position: fixed;
-    margin-left: 23vw;
-    margin-top: 8px;
+    justify-content: center;
+    align-content: center;
+    z-index: 999;
 }
 
 .logo img{
     width: 100px;
     height: 100px;
-}
-
-.title{
-    color: white;
-    font-size: 20px;
-    position: fixed;
 }
 
 #header{
@@ -34,40 +36,35 @@ html{
     background-color: black;
     border-bottom: 1px solid red;
     position: fixed;
-    z-index: 999;
+    z-index: 2;
 }
 
 #sub-menu{
-    margin-left: 110vw;
-    margin-top: 60px;
-    height: 99vh;
-    position: absolute;
+    width: 50vw;
+    margin-top: 8.7vh;
+    margin-left: 200%;
+    height: 91.25vh;
+    position: fixed;
     background-color: black;
     opacity: 0;
-    display: block;
-    z-index: 998;
+    justify-content: center;
+    align-content: center;
 }
 
 #sub-menu ul li{
     list-style: none;
-    text-align: right;
-    padding-top: 40px;
-    padding-left: 113px;
-    padding-right: 20vw;
-    padding-bottom: 40px;
+    text-align: center;
     transform: scale(0);
-    text-align: right;
-    margin-left: 110vw;
+    padding-top: 8vh;
+    padding-bottom: 8vh;
 }
 
 #sub-menu ul li:hover{
-    opacity: 30%;
     background-color: rgb(43, 43, 43);
 }
 
 #sub-menu a{
-    margin-left: 14vw;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     text-decoration: none;
     margin-bottom: 40px;
@@ -78,7 +75,9 @@ html{
     position: absolute;
     margin-left: 95vw;
     margin-top: 15px;
+    right: 1vw;
     cursor: pointer;
+    z-index: 999;
 }
 
 #line1, #line2, #line3{
@@ -96,19 +95,28 @@ html{
     margin-top: 10px;
 }
 
+.background img{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+}
+
 .cards{
     display: flex;
-    padding: 32px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    justify-content: center;
+    align-content: center;
+    top: 50vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
 }
 
 .cards .card{
+    height: 40vh;
+    width: 20vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     background: gray;
     padding: 1rem 1.5rem;
@@ -117,6 +125,7 @@ html{
     margin-left: 32px;
     border: 2px solid red;
     font-family: 'Oswald', sans-serif;
+    box-shadow: 0px 10px 10px 0px black;
 }
 
 .cards section.card:first-child{
@@ -124,22 +133,27 @@ html{
 }
 
 .card a{
+    align-self: center;
     text-decoration: none;
     color: red;
+    font-family: another;
+    font-size: 20px;
+    position: absolute;
+    top: 75%;
 }
 
 .card h1{
     color: red;
     background-color: indigo;
-    border-radius: 2px;
+    width: 100%;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
-
 #header.active #sub-menu{
-    margin-left: 65vw;
+    margin-left: 50vw;
     opacity: 85%;
-    transition: 0.2s ease-in;
+    transition: 0.1s ease-in;
 }
 
 #header.active ul li{
@@ -164,36 +178,4 @@ html{
     margin-top: -16px;
     transform: rotate(-45deg);
     transition: 0.2s ease-in;
-}
-
-@media screen and (max-width: 1024px) {
-    .logo{
-        position: fixed;
-        margin-left: 23.5vw;
-        margin-top: 8px;
-    }
-    
-    .logo img{
-        width: 100px;
-        height: 100px;
-    }
-    
-    .title{
-        position: fixed;
-        float: left;
-        font-size: 12px;
-    }
-
-    #nav{
-        right: 2%;
-    }
-
-    #sub-menu ul li a{
-        margin-right: 2%;
-    }
-
-    #header.active #sub-menu{
-        margin-left: 59.5vw;
-    }
-    
 }

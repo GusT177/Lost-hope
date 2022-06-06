@@ -13,7 +13,11 @@ const icones = document.querySelector('.icons');
         header.classList.toggle('active');
     }
 
-    nav.addEventListener('click', toggleMenu);
+    nav.addEventListener('click', toggleMenu, ()=>{
+        setTimeout(function(){
+            subMenu.style.display = 'block';
+        },200);
+    });
 
 //Icones Sociais
     discord.addEventListener('mouseenter', function(){

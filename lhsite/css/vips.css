@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Another;
+    src: url('/fontes/Another\ Danger\ Slanted\ -\ Demo.otf');
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -19,6 +24,16 @@ html{
 .logo img{
     width: 100px;
     height: 100px;
+}
+
+.title{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    top: 20%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
 
 #header{
@@ -89,6 +104,61 @@ html{
     margin-top: 10px;
 }
 
+.cards{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+.card img{
+    width: 100%;
+}
+
+.cards .card{
+    height: 40vh;
+    width: 14vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: gray;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    border: 2px solid red;
+    font-family: 'Oswald', sans-serif;
+    margin-left: 32px;
+}
+
+.cards section.card:first-child{
+    margin-left: 0;
+}
+
+#card1 h1{
+    color: #ce7d2c;
+}
+
+#card2 h1{
+    color: #C0C0C0;
+}
+
+#card3 h1{
+    color: #FFD700;
+}
+
+#card4 h1{
+    color: #E5E4E2;
+}
+
+#card5 h1{
+    color: #61e2ff;
+}
+
+#card6 h1{
+    color: #ec4b0c;
+}
 
 #header.active #sub-menu{
     margin-left: 65vw;
@@ -146,10 +216,3 @@ html{
     
 }
 
-
-.title2{
-    text-align: center;
-    color: white;
-    font-family: 'Oswald', sans-serif;
-    text-shadow: -1px 2px 8px white;
-}

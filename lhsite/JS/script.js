@@ -7,7 +7,6 @@ const tiktok = document.getElementById('tiktok');
 const icones = document.querySelector('.icons');
 
 
-
 //Botão Menu
     function toggleMenu(){
         header.classList.toggle('active');
@@ -19,6 +18,7 @@ const icones = document.querySelector('.icons');
         },200);
     });
 
+if (window.matchMedia("(min-width: 601px)").matches) {
 //Icones Sociais
     discord.addEventListener('mouseenter', function(){
         discord.style.width = '100px';
@@ -52,3 +52,5 @@ const icones = document.querySelector('.icons');
             tiktok.style.opacity = 0.7;
             tiktok.style.marginTop = '0vh';
         });
+
+    }

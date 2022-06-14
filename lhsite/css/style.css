@@ -186,8 +186,6 @@ html{
     transition: 0.2s ease-in;
 }
 
-
-
 @media screen and (max-width: 600px) {
     .logo{
         justify-content: left;
@@ -257,7 +255,7 @@ html{
     }
 
     #sub-menu a{
-        font-size: 60px;
+        font-size: 72px;
         margin-bottom: 40px;
     }
     
@@ -276,6 +274,10 @@ html{
     
     #line3{
         margin-top: 2vh;
+    }
+
+    #header.active #sub-menu{
+        margin-left: 0;
     }
 
     #header.active #line1{

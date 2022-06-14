@@ -42,7 +42,7 @@ html{
 #sub-menu{
     width: 50vw;
     margin-top: 8.7vh;
-    margin-left: 200%;
+    margin-left: 100%;
     height: 91.25vh;
     position: fixed;
     background-color: black;
@@ -178,4 +178,131 @@ html{
     margin-top: -16px;
     transform: rotate(-45deg);
     transition: 0.2s ease-in;
+}
+
+@media screen and (max-width: 600px) {
+    .logo{
+        justify-content: left;
+    }
+    
+    .logo img{
+        width: 200px;
+        height: 200px;
+    }
+    
+    #header{
+        height: 15vh;
+        border-bottom: 4px solid red;
+        position: fixed;
+        z-index: 999;
+    }
+
+    #nav{
+        position: absolute;
+        margin-left: 95vw;
+        margin-top: 15px;
+        right: 1vw;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    #sub-menu{
+        width: 100vw;
+        height: 100vh;
+        margin-top: 15vh;
+    }
+
+    #sub-menu ul li{
+        padding-top: 12.5vh;
+        padding-bottom: 12.5vh;
+    }
+
+    #sub-menu a{
+        position: relative;
+        font-size: 72px;
+    }
+
+    .cards{
+        margin-top: 75vh;
+        display: block;
+        position: absolute;
+    }
+
+    .cards .card{
+        margin-top: 15vh;
+        height: 60vh;
+        width: 70vw;
+        background: gray;
+        border: 2px solid red;
+        box-shadow: 0px 10px 10px 0px black;
+        max-height: none;
+        margin-left: 0;
+        position: relative;
+    }
+
+    .card span{
+        font-size: 52px;
+    }
+
+    .card a{
+        align-self: center;
+        position: absolute;
+        margin-bottom: 0;
+        font-size: 36px;
+        text-shadow: 0 0 10px black;
+    }
+
+    .card h1{
+        text-align: center;
+        font-size: 52px;
+        color: red;
+        background-color: indigo;
+        width: 100%;
+        height: 20%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    #card3{
+        height: 75vh;
+    }
+    
+    #line1, #line2, #line3{
+        background-color: white;
+        width: 90px;
+        height: 10px;
+        transition: 0.2s ease-in;
+        margin-top: 1vh;
+        margin-right: 1vw;
+    }
+    
+    #line2{
+        margin-top: 2vh;
+    }
+    
+    #line3{
+        margin-top: 2vh;
+    }
+
+    #header.active #sub-menu{
+        margin-left: 0;
+    }
+
+    #header.active #line1{
+        margin-top: 4vh;
+        transform: rotate(45deg);
+        transition: 0.2s ease-in;
+    }
+    
+    #header.active #line2{
+        opacity: 0;
+        transition: 0.2s ease-in;
+    }
+    
+    #header.active #line3{
+        margin-top: -4.25vh;
+        transform: rotate(-45deg);
+        transition: 0.2s ease-in;
+    }
+
 }

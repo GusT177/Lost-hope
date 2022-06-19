@@ -249,7 +249,7 @@ html{
         position: absolute;
         margin-bottom: 0;
         font-size: 36px;
-        text-shadow: 0 0 10px black;
+        text-shadow: 0 0 10px white;
     }
 
     .card h1{
